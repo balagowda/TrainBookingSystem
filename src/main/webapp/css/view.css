@@ -1,0 +1,242 @@
+/* styles.css */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial', sans-serif;
+}
+
+body {
+	background: linear-gradient(135deg, #4a00e0, #8e2de2);
+	color: #fff;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+
+/* Search Container Styles */
+.search-container {
+	max-width: 800px;
+	margin: 10px auto 50px; /* Space for navbar and padding below */
+	padding: 1.5rem;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 20px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+}
+
+.search-container form {
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+}
+
+.search-container input[type="text"] {
+	padding: 12px 20px;
+	border: none;
+	border-radius: 25px;
+	font-size: 16px;
+	background: rgba(255, 255, 255, 0.9);
+	color: #333;
+	outline: none;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	flex: 1;
+	min-width: 150px;
+}
+
+.search-container input[type="text"]:focus {
+	transform: scale(1.02);
+	box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.search-container button {
+	padding: 12px 24px;
+	background: linear-gradient(to right, #4CAF50, #45a049);
+	border: none;
+	border-radius: 25px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-container button:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 15px rgba(76, 175, 80, 0.5);
+}
+
+/* Train Details Container Styles */
+.container.train-details {
+	max-width: 800px;
+	margin: 20px auto;
+	padding: 0.5rem;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 20px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+	animation: fadeIn 1s ease-in-out;
+}
+
+.train-info-box {
+	padding: 1rem;
+}
+
+/* Train Header Styles */
+.train-header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+	gap: 20px;
+}
+
+.timing-info {
+	background: rgba(255, 255, 255, 0.05);
+	padding: 10px;
+	border-radius: 10px;
+	flex: 1;
+}
+
+.timing-info p {
+	font-size: 16px;
+	margin: 5px 0;
+	color: #fff;
+	opacity: 0.9;
+}
+
+.timing-info strong {
+	color: #ffdd00;
+}
+
+/* Train Info Styles */
+.train-info {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+	gap: 20px;
+}
+
+.left-section, .right-section {
+	flex: 1;
+	text-align: center;
+}
+
+.left-section p, .right-section p {
+	font-size: 16px;
+	margin: 5px 0;
+	color: #fff;
+	opacity: 0.9;
+}
+
+.left-section strong, .right-section strong {
+	color: #ffdd00;
+}
+
+.separator {
+	width: 2px;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 1px;
+}
+
+/* Class Fare Styles */
+.parent {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 5px;
+}
+
+.child {
+   	background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    width: 120px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.class {
+    font-size: 16px;
+    color: #ffdd00;
+    font-weight: 600;
+}
+
+
+/* Book Ticket Button Styles */
+.book-ticket {
+	display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+    width:90%;
+}
+
+.book-ticket:hover {
+	transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 75, 43, 0.5);
+}
+
+.book-ticket-container {
+	text-align: center;
+}
+
+/* Animations */
+@
+keyframes fadeIn {from { opacity:0;
+	transform: translateY(20px);
+}
+
+to {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+}
+
+/* Responsive Design */
+@media ( max-width : 768px) {
+	.container.train-details, .search-container {
+		margin: 20px 10px;
+		padding: 1rem;
+	}
+	.top-right {
+		top: 10px;
+		right: 10px;
+	}
+	.search-container form {
+		flex-direction: column;
+		gap: 10px;
+	}
+	.search-container input[type="text"] {
+		min-width: auto;
+		width: 100%;
+	}
+	.train-header {
+		flex-direction: column;
+		gap: 15px;
+	}
+	.train-info {
+		flex-direction: column;
+		gap: 15px;
+	}
+	.parent {
+		grid-template-columns: 1fr; /* Single column on mobile */
+	}
+	.book-ticket, .back-home, .search-container button {
+		padding: 10px 20px;
+		font-size: 14px;
+	}
+}
